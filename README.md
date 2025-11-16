@@ -1,174 +1,102 @@
-# Marta Marketing - Landing Page
+# Marta López - Gestión de Campañas Meta para Agentes Inmobiliarios
 
-Sitio web profesional para gestión de campañas Meta (Facebook e Instagram) dirigido a agentes inmobiliarios independientes.
+## 📖 Sobre el Proyecto
 
-## 🚀 Características
+Este es el sitio web profesional de **Marta López**, agente inmobiliaria especializada en la gestión integral de campañas publicitarias en **Meta (Facebook e Instagram)** para agentes inmobiliarios independientes.
 
-- **Next.js 14** con App Router y TypeScript
-- **Tailwind CSS** para estilos modernos y responsivos
-- **Formulario de contacto funcional** con envío de emails via Nodemailer
-- **Validación de formularios** con React Hook Form y Zod
-- **Emails HTML profesionales** con confirmación automática al cliente
-- **Botones de contacto flotantes** (WhatsApp, Teléfono, Email)
-- **Tests completos** con Jest y Testing Library
-- **Docker** ready para despliegue fácil
-- **CI/CD** con GitHub Actions
-- **Diseño responsive** optimizado para móviles y tablets
-- **SEO optimizado** con meta tags apropiados
+## 🎯 El Problema que Resuelve
 
-## 📋 Requisitos Previos
+Los agentes inmobiliarios independientes enfrentan un desafío constante: necesitan captar más inmuebles y clientes potenciales, pero no tienen tiempo ni experiencia en publicidad digital. Las plataformas de Meta ofrecen un enorme potencial para llegar a compradores y propietarios interesados, pero gestionarlas correctamente requiere conocimientos técnicos, tiempo y experiencia que la mayoría de agentes no poseen.
 
-- Node.js 20 o superior
-- npm o yarn
-- Docker (opcional, para despliegue)
+## 💡 La Solución
 
-## 🛠️ Instalación
+Marta López, siendo ella misma agente inmobiliaria, conoce de primera mano las necesidades del sector y ofrece un **servicio completamente gestionado** donde se encarga de:
 
-```bash
-# Clonar el repositorio
-git clone https://github.com/tu-usuario/marta-marketing.git
-cd marta-marketing
+- **Diseño de anuncios** profesionales y atractivos
+- **Segmentación precisa** del público objetivo
+- **Gestión completa de campañas** en Facebook e Instagram
+- **Optimización del presupuesto** adaptado a cada agente
+- **Informes claros y personalizados** de resultados
+- **Acompañamiento continuo** sin necesidad de formación previa
 
-# Instalar dependencias
-npm install
+Todo enfocado en un único objetivo: **aumentar las consultas de compradores y propietarios para impulsar el negocio inmobiliario**.
 
-# Configurar variables de entorno
-cp .env.local.example .env.local
-# Editar .env.local con tus configuraciones SMTP
+## 🏆 Propuesta de Valor Única
 
-# Ejecutar en desarrollo
-npm run dev
-```
+### Hecho Por un Agente, Para Agentes
+A diferencia de las agencias de marketing genéricas, Marta entiende el sector inmobiliario desde dentro. Habla el mismo idioma que los agentes y conoce exactamente qué tipo de leads necesitan.
 
-La aplicación estará disponible en `http://localhost:3000`
+### Servicio Todo Incluido
+Los agentes no necesitan aprender publicidad digital, no deben dedicar tiempo a crear anuncios ni preocuparse por la gestión técnica. Marta se encarga de todo el proceso de principio a fin.
 
-### 📧 Configuración de Email (IMPORTANTE)
+### Enfoque 100% Inmobiliario
+El servicio está diseñado exclusivamente para agentes inmobiliarios independientes, con estrategias probadas específicamente en este sector.
 
-Para que el formulario de contacto funcione correctamente, necesitas configurar las variables SMTP en `.env.local`:
+### Sin Complicaciones
+No hay contratos complejos, formaciones obligatorias ni herramientas complicadas. El agente solo recibe más contactos cualificados y reportes claros del rendimiento.
 
-#### Opción 1: Gmail (Recomendado para pruebas)
+## 🌟 Características del Sitio Web
 
-1. Activa la verificación en 2 pasos en tu cuenta de Google
-2. Ve a [App Passwords](https://myaccount.google.com/apppasswords)
-3. Genera una contraseña de aplicación para "Mail"
-4. Configura en `.env.local`:
+El sitio web ha sido diseñado meticulosamente siguiendo principios de **diseño moderno**, **experiencia de usuario óptima** y **conversión efectiva**:
 
-```env
-SMTP_HOST=smtp.gmail.com
-SMTP_PORT=587
-SMTP_USER=tu-email@gmail.com
-SMTP_PASSWORD=tu-contraseña-de-aplicacion
-SMTP_FROM=noreply@martalopez.com
-CONTACT_EMAIL=info@martalopez.com
-```
+### Diseño Visual Impactante
+- **Paleta de colores estratégica**: Azules que transmiten confianza y profesionalismo, combinados con dorados que evocan éxito y valor premium
+- **Animaciones fluidas y elegantes**: Efectos visuales modernos que captan la atención sin distraer del mensaje
+- **Diseño glassmorphism**: Elementos con transparencias y desenfoques que aportan modernidad y sofisticación
+- **Responsive design perfecto**: Experiencia impecable en cualquier dispositivo
 
-#### Opción 2: Otros proveedores SMTP
+### Estructura Orientada a la Conversión
+1. **Hero Section Impactante**: Mensaje claro y directo con imagen profesional de Marta
+2. **Servicios Explicados**: Descripción visual de todo lo que incluye el servicio
+3. **Proceso Transparente**: Explicación paso a paso de cómo funciona la colaboración
+4. **Sobre Marta**: Conexión personal y credibilidad profesional
+5. **Testimonios**: Prueba social de resultados reales
+6. **Contacto Fácil**: Múltiples formas de contactar de manera inmediata
 
-Consulta la documentación de tu proveedor (SendGrid, Mailgun, AWS SES, etc.) y ajusta las variables correspondientes.
+### Experiencia de Usuario Premium
+- **Formulario de contacto profesional** con validación inteligente y confirmación automática por email
+- **Botones de contacto flotantes** siempre visibles: WhatsApp, teléfono y email
+- **Navegación intuitiva** con scroll suave entre secciones
+- **Mensajes claros** sin jerga técnica, hablando el lenguaje de los agentes inmobiliarios
+- **Llamadas a la acción estratégicas** en cada punto clave del sitio
 
-**Nota**: Sin configuración SMTP, el formulario seguirá funcionando en desarrollo pero los emails solo se mostrarán en la consola.
+### Optimización y Profesionalismo
+- **SEO optimizado** para aparecer en búsquedas relevantes
+- **Carga rápida** para no perder visitantes impacientes
+- **Emails HTML profesionales** que refuerzan la marca en cada interacción
+- **Diseño coherente** que transmite seriedad y confiabilidad en cada elemento
 
-## 🧪 Tests
+## 🎨 Filosofía de Diseño
 
-```bash
-# Ejecutar todos los tests
-npm test
+Cada elemento del sitio ha sido pensado como lo haría un **equipo de diseñadores y marketers profesionales**:
 
-# Ejecutar tests en modo watch
-npm run test:watch
+- **Colores con significado**: Cada tono elegido comunica confianza, profesionalismo o éxito
+- **Jerarquía visual clara**: El ojo del usuario es guiado naturalmente hacia lo importante
+- **Copy persuasivo**: Textos escritos para conectar emocionalmente y motivar a la acción
+- **Prueba social**: Elementos que refuerzan la autoridad y experiencia de Marta
+- **Reducción de fricción**: Múltiples formas fáciles de contactar sin barreras
 
-# Ejecutar linter
-npm run lint
-```
+## 🚀 Resultado Final
 
-## 🏗️ Build
+Un sitio web que no solo es visualmente atractivo, sino que está **estratégicamente diseñado para convertir visitantes en clientes**. Cada sección, cada color, cada palabra está pensada para:
 
-```bash
-# Crear build de producción
-npm run build
+1. **Captar la atención** de agentes inmobiliarios que buscan más clientes
+2. **Comunicar claridad** sobre el servicio y sus beneficios
+3. **Generar confianza** a través del diseño profesional y la credibilidad de Marta
+4. **Motivar la acción** facilitando el contacto inmediato por múltiples canales
 
-# Ejecutar build de producción
-npm start
-```
+---
 
-## 🐳 Docker
+## 📱 Formas de Contacto
 
-```bash
-# Build de la imagen
-docker build -t marta-marketing .
+El sitio web incluye múltiples canales de contacto directo:
+- **WhatsApp**: +34 608 136 529
+- **Teléfono**: +34 608 136 529
+- **Email**: mblp66@gmail.com
+- **Formulario web**: Con respuesta automática profesional
 
-# Ejecutar el contenedor
-docker run -p 3000:3000 marta-marketing
+---
 
-# O usar docker-compose
-docker-compose up -d
-```
+**Desarrollado con atención al detalle, pensando en resultados reales para agentes inmobiliarios independientes.**
 
-## 📦 Estructura del Proyecto
-
-```
-marta-marketing/
-├── app/                    # Next.js App Router
-│   ├── api/               # API routes
-│   │   ├── contact/      # Endpoint de formulario
-│   │   └── health/       # Health check
-│   ├── layout.tsx         # Layout principal
-│   ├── page.tsx          # Página principal
-│   └── globals.css       # Estilos globales
-├── components/            # Componentes React
-│   ├── Hero.tsx
-│   ├── Services.tsx
-│   ├── About.tsx
-│   ├── HowItWorks.tsx
-│   ├── Testimonials.tsx
-│   ├── Contact.tsx
-│   ├── Footer.tsx
-│   └── FloatingContact.tsx
-├── lib/                  # Utilidades y servicios
-│   └── email.ts         # Servicio de emails con Nodemailer
-├── __tests__/            # Tests unitarios
-│   ├── api/             # Tests de API
-│   └── *.test.tsx       # Tests de componentes
-├── public/               # Archivos estáticos
-├── .github/workflows/    # CI/CD
-├── Dockerfile
-├── docker-compose.yml
-└── package.json
-```
-
-## 🎨 Paleta de Colores
-
-- **Primary (Azul)**: Confianza, profesionalismo
-  - `#0ea5e9` (primary-500)
-  - `#0284c7` (primary-600)
-  
-- **Accent (Dorado)**: Éxito, valor
-  - `#fbbf24` (accent-300)
-  - `#f59e0b` (accent-400)
-
-## 🚀 Despliegue
-
-El proyecto incluye configuración de CI/CD con GitHub Actions que:
-
-1. Ejecuta tests automáticamente
-2. Construye la imagen Docker
-3. Despliega a producción (requiere configurar secrets)
-
-### Secrets necesarios para CI/CD:
-
-- `DOCKER_USERNAME`: Usuario de Docker Hub
-- `DOCKER_PASSWORD`: Password de Docker Hub
-- `DEPLOY_HOST`: IP/dominio del servidor
-- `DEPLOY_USER`: Usuario SSH
-- `DEPLOY_KEY`: Clave privada SSH
-
-## 📝 Licencia
-
-Todos los derechos reservados © 2025 Marta López
-
-## 👥 Contacto
-
-Para consultas sobre el proyecto o servicios:
-- Email: info@martalopez.com
-- Tel: +34 600 000 000
-
+© 2025 Marta López - Especialista en Marketing Inmobiliario
