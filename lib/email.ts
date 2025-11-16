@@ -443,20 +443,19 @@ const getConfirmationEmailTemplate = (data: EmailData): string => {
 
 // Función para enviar email de confirmación al cliente
 export async function sendConfirmationEmail(data: EmailData): Promise<void> {
-  try {
-    const transporter = createTransporter()
-    
-    if (!transporter) {
-      console.log('📧 Email de confirmación simulado para:', data.email)
-      return
-    }
+  const transporter = createTransporter()
+  
+  if (!transporter) {
+    console.log('📧 Email de confirmación simulado para:', data.email)
+    return
+  }
 
-    const mailOptions = {
-      from: process.env.SMTP_FROM || process.env.SMTP_USER,
-      to: data.email,
-      subject: '✅ ¡Hemos recibido tu consulta! - Marta López',
-      html: getConfirmationEmailTemplate(data),
-      text: `
+  const mailOptions = {
+    from: process.env.SMTP_FROM || process.env.SMTP_USER,
+    to: data.email,
+    subject: '✅ ¡Hemos recibido tu consulta! - Marta López',
+    html: getConfirmationEmailTemplate(data),
+    text: `
 ¡Gracias por contactarme, ${data.name}!
 
 He recibido tu consulta y me pondré en contacto contigo en menos de 24 horas.
@@ -469,13 +468,13 @@ Si tienes alguna pregunta urgente, no dudes en contactarme:
 Un saludo,
 Marta López
 Especialista en Marketing Inmobiliario
-      `,
-    }
-
-    await transporter.sendMail(mailOptions)
-    console.log('✅ Email de confirmación enviado a:', data.email)
-  } catch (error) {
-    console.error('❌ Error al enviar email de confirmación:', error)
+    `,
   }
+
+  console.log('📤 Intentando enviar email de confirmación a:', data.email)
+  console.log('📤 Desde:', mailOptions.from)
+  
+  await transporter.sendMail(mailOptions)
+  console.log('✅ Email de confirmación enviado exitosamente a:', data.email)
 }
 

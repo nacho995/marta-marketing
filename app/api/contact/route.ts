@@ -32,10 +32,12 @@ export async function POST(request: NextRequest) {
 
     const data = validationResult.data
 
-    // Enviar email principal
-    const result = await sendContactEmail(data)
+    // Enviar email a Marta
+    console.log('📧 Enviando email a Marta...')
+    const resultToMarta = await sendContactEmail(data)
 
-    if (!result.success) {
+    if (!resultToMarta.success) {
+      console.error('❌ Error al enviar email a Marta:', resultToMarta.error)
       return NextResponse.json(
         {
           success: false,
@@ -44,11 +46,17 @@ export async function POST(request: NextRequest) {
         { status: 500 }
       )
     }
+    console.log('✅ Email a Marta enviado correctamente')
 
-    // Enviar email de confirmación al cliente (no bloquear la respuesta)
-    sendConfirmationEmail(data).catch(err => 
-      console.error('Error enviando confirmación:', err)
-    )
+    // Enviar email de confirmación al cliente
+    console.log('📧 Enviando email de confirmación al cliente:', data.email)
+    try {
+      await sendConfirmationEmail(data)
+      console.log('✅ Email de confirmación enviado correctamente')
+    } catch (err) {
+      console.error('❌ Error enviando confirmación al cliente:', err)
+      // No fallar la petición si falla el email de confirmación
+    }
 
     return NextResponse.json(
       {
